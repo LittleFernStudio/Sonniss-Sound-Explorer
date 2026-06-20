@@ -1,0 +1,77 @@
+:root { --gap: 5px; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 28px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: #0b0f14; color: #e8eef6;
+}
+.wrap { max-width: 1800px; margin: 0 auto; }
+h1 { font-size: 1.6rem; margin: 0 0 10px; }
+p.hint { margin: 0 0 18px; color: #a5b3c3; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* 6 columns */
+  gap: var(--gap);
+  align-items: start;
+}
+
+/* Responsiveness (optional) */
+@media (max-width: 1280px) { .grid { grid-template-columns: repeat(5, 1fr); } }
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 900px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 680px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
+
+.tile {
+  margin: 0; /* remove default figure margins to keep rows tight like the circled example */
+  border-radius: 14px;
+  background: linear-gradient(180deg, #111826 0%, #0e141f 100%);
+  border: 1px solid #1f2a3a;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  padding: 10px 12px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column; /* 'Track' on first line, filename on second line */
+  gap: 4px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  overflow-wrap: break-word;
+}
+.track {
+  line-height: 1.1;
+  font-weight: 700;
+  color: #e8eef6;
+}
+
+.filename {
+  line-height: 1.1;
+  color: #9fb0c6;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.copy-link{
+  text-decoration: none;
+  color: #9fb0c6;
+  transition: 0.3s;
+}
+.copy-link:hover{
+  font-size: 1.3rem;
+  color: #a2e6be;
+}
+audio {
+  width: 100%;
+  height: 32px; /* compact height like the circled top row */
+}
+
+.toolbar {
+  display: flex; gap: 10px; margin: 0 0 16px; flex-wrap: wrap;
+}
+button {
+  appearance: none; border: 1px solid #223145; background: #152234; color: #e8eef6;
+  padding: 9px 12px; border-radius: 12px; font-weight: 600; cursor: pointer;
+}
+button:hover { background: #1a2b43; }
