@@ -27,3 +27,11 @@ The entire Sonniss GDC audio collection which is around 231 GB with over 7 thous
 The latest 2026 GDC bundle is available here: https://gdc.sonniss.com/
 
 Basic walkthrough: https://youtu.be/ekVJAU43EJk
+
+## Unzipping the Sonnis Files with unzip.py
+
+Open the unzip.py and replace the source and destination folders of your zipped sonniss files and where you want to have them stored. (Must be in the same directory as the index.html file is in)
+
+```
+python .\unzip.py
+```
