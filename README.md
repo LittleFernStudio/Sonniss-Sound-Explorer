@@ -1,6 +1,6 @@
 # Sonniss GDC HTML Viewer
-
-An HTML viewer I built for browsing through and listening to my collection of the Sonniss GDC audio archive
+## Credits to [TheGiwi](https://github.com/TheGiwi) 
+TheGiwi built an HTML viewer for browsing through and listening to the collection of the Sonniss GDC audio archive
 
 The viewer shows the audio file name and the folder it is contained in.
 When you hover over the audio file name you can click on it and it will copy the path to the folder it is contained in.
